@@ -7,12 +7,13 @@ st.set_page_config(
 )
 
 # ==============================================================================
-# 🎨 REFINED PROFESSIONAL SLATE & BOTANICAL DESIGN SYSTEM (CSS)
+# 🎨 SCIENTIFIC & PROFESSIONAL DESIGN SYSTEM (CSS)
 # ==============================================================================
 custom_css = """
-<import href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
 <style>
-/* Clean Professional Light Background with Modern Dot Grid */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+/* Clean Scientific Light Background with Subtle Grid */
 .stApp {
     background-color: #F8FAFC;
     background-image: radial-gradient(#CBD5E1 0.8px, transparent 0.8px), 
@@ -22,13 +23,13 @@ custom_css = """
     color: #0F172A !important;
 }
 
-/* Premium Typography Configuration */
+/* Typography Configuration */
 html, body, [class*="css"], .stMarkdown, p, span, label, h1, h2, h3, h4, h5, h6 {
     color: #0F172A !important;
     font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
 }
 
-/* Header Styling with Smooth Gradient Text */
+/* Header Styling */
 h1 {
     font-weight: 800 !important;
     letter-spacing: -1.5px;
@@ -39,42 +40,41 @@ h2, h3 {
     font-weight: 700 !important;
 }
 
-/* Modern Glass Cards with Elevation Hover */
+/* Scientific Glass Cards with Elevation Hover */
 div[data-testid="stBlock"] {
     background-color: #FFFFFF !important;
-    border-radius: 14px !important;
+    border-radius: 12px !important;
     border: 1px solid #E2E8F0 !important;
-    box-shadow: 0 4px 24px rgba(15, 23, 42, 0.04);
+    box-shadow: 0 2px 12px rgba(15, 23, 42, 0.03);
     padding: 1.8rem;
-    transition: all 0.3s ease;
+    transition: all 0.25s ease;
 }
 div[data-testid="stBlock"]:hover {
-    border-color: #CBD5E1 !important;
-    box-shadow: 0 8px 30px rgba(15, 23, 42, 0.08);
+    border-color: #94A3B8 !important;
+    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.06);
 }
 
 /* Sleek Primary Buttons */
 div.stButton > button, div.stDownloadButton > button {
     background-color: #0F172A !important;
     color: #FFFFFF !important;
-    border-radius: 8px !important;
+    border-radius: 6px !important;
     border: none !important;
     font-weight: 600 !important;
-    padding: 0.5rem 1rem;
-    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+    padding: 0.4rem 1rem;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.1);
     transition: all 0.2s ease;
 }
 div.stButton > button:hover {
     background-color: #334155 !important;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(15, 23, 42, 0.2);
+    transform: translateY(-1px);
 }
 
 /* Metric Display Cards */
 [data-testid="stMetricValue"] {
     color: #0F172A !important;
     font-weight: 800 !important;
-    font-size: 2.2rem !important;
+    font-size: 2rem !important;
 }
 [data-testid="stMetricLabel"] {
     color: #64748B !important;
@@ -83,15 +83,15 @@ div.stButton > button:hover {
 
 /* Custom Styled Tabs */
 .stTabs [data-baseweb="tab-list"] {
-    gap: 10px;
+    gap: 8px;
     background-color: transparent;
 }
 .stTabs [data-baseweb="tab"] {
     background-color: #F1F5F9 !important;
-    border-radius: 8px 8px 0px 0px;
+    border-radius: 6px 6px 0px 0px;
     border: 1px solid #CBD5E1;
     color: #475569 !important;
-    padding: 12px 22px;
+    padding: 10px 20px;
     font-weight: 600;
 }
 .stTabs [aria-selected="true"] {
@@ -104,29 +104,38 @@ div.stButton > button:hover {
 /* Tech Stack Badge Styling */
 .badge {
     display: inline-block;
-    padding: 5px 12px;
-    margin: 3px;
+    padding: 4px 10px;
+    margin: 2px;
     font-size: 11px;
     font-weight: 600;
     color: #334155;
     background-color: #F1F5F9;
     border: 1px solid #E2E8F0;
-    border-radius: 6px;
+    border-radius: 4px;
 }
 </style>
 """
 st.markdown(custom_css, unsafe_allow_html=True)
 
 # ==============================================================================
-# 🧭 SIDEBAR / NAVIGATION & PROFILE SUMMARY
+# 🧭 SIDEBAR / PROFILE & NAVIGATION
 # ==============================================================================
 with st.sidebar:
+  # Profile Image (Place 'profile.jpg' in your repository folder)
+  try:
+    st.image("profile.jpg", use_container_width=True)
+  except:
+    st.image(
+        "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400",
+        use_container_width=True,
+    )
+
   st.markdown("### 🌍 Henry Kiplagat")
-  st.caption("GIS & Remote Sensing Analyst")
+  st.caption("GIS, Remote Sensing & Spatial Engineer")
   st.divider()
 
-  st.markdown("**📍 Location:** Nairobi & Iten, Kenya[cite: 1]")
-  st.markdown("**🎓 Education:** B.Sc. GIS, JKUAT (2021–2025)[cite: 1, 2]")
+  st.markdown("**📍 Location:** Nairobi & Iten, Kenya")
+  st.markdown("**🎓 Education:** B.Sc. GIS, JKUAT (2021–2025)")
   st.markdown(
       "**🛠️ Core Stack:** ArcGIS, QGIS, Python, GeoPandas, Folium, NetworkX,"
       " AutoCAD"
@@ -134,12 +143,11 @@ with st.sidebar:
 
   st.divider()
   st.markdown("### 📬 Direct Contact")
-  st.markdown("📧 **Email:** kiplagathenry586@gmail.com[cite: 1]")
-  st.markdown("📞 **Phone:** +254 790 148 801[cite: 1]")
+  st.markdown("📧 **Email:** kiplagathenry586@gmail.com")
+  st.markdown("📞 **Phone:** +254 790 148 801")
   st.markdown(
       "🔗 **LinkedIn:**"
       " [linkedin.com/in/henry-kiplagat-aa3b26333](https://linkedin.com/in/henry-kiplagat-aa3b26333)"
-      "[cite: 1]"
   )
 
   st.divider()
@@ -148,7 +156,7 @@ with st.sidebar:
 # ==============================================================================
 # 🏠 MAIN LANDING HEADER
 # ==============================================================================
-st.title("Hi, I'm Henry Kiplagat 🚀")
+st.title("Henry Kiplagat, B.Sc. GIS 🚀")
 st.markdown(
     "### *GIS & Remote Sensing Analyst specializing in spatial modeling, machine"
     " learning applications, telecommunication network design, and"
@@ -178,9 +186,9 @@ tab_projects, tab_experience, tab_services, tab_skills, tab_about = st.tabs([
 with tab_projects:
   st.markdown("## 🌟 Comprehensive Geospatial Project Hub")
   st.markdown(
-      "Explore over 10 production-ready mapping tools, machine learning models,"
-      " and interactive web applications spanning agriculture, infrastructure,"
-      " and telecommunications."
+      "Explore 10 production-ready mapping tools, machine learning models, and"
+      " interactive web applications spanning agriculture, infrastructure, and"
+      " telecommunications."
   )
   st.divider()
 
@@ -453,11 +461,11 @@ with tab_experience:
     st.markdown(
         "### 🔹 YouthMappers Contributor & Volunteer | OpenStreetMap Kenya"
     )
-    st.caption("*September 2023 – Present | Nairobi, Kenya*[cite: 2]")
+    st.caption("*September 2023 – Present | Nairobi, Kenya*")
     st.markdown(
         """
-        - Active contributor leveraging open-source geospatial platforms (OpenStreetMap, HOT Tasking Manager, JOSM) to map critical infrastructure[cite: 2].
-        - Supported humanitarian response efforts and generated high-quality open spatial data across Kenya[cite: 2].
+        - Active contributor leveraging open-source geospatial platforms (OpenStreetMap, HOT Tasking Manager, JOSM) to map critical infrastructure.
+        - Supported humanitarian response efforts and generated high-quality open spatial data across Kenya.
         """
     )
 
@@ -472,18 +480,14 @@ with tab_services:
   c1, c2 = st.columns(2)
   with c1:
     with st.container():
-      st.markdown(
-          "### 🛰️ Remote Sensing, Photogrammetry & GIS Analysis"
-      )
+      st.markdown("### 🛰️ Remote Sensing, Photogrammetry & GIS Analysis")
       st.markdown(
           "High-precision satellite image classification, UAV/drone imagery"
           " photogrammetry, change detection, spatial modeling, and automated GIS"
           " workflow scripting."
       )
     with st.container():
-      st.markdown(
-          "### 📐 Land, Topographic & Engineering Surveying"
-      )
+      st.markdown("### 📐 Land, Topographic & Engineering Surveying")
       st.markdown(
           "Cadastral boundary surveys, topographic mapping, construction"
           " layout, and precise site data collection using RTK GPS, Total"
@@ -491,18 +495,14 @@ with tab_services:
       )
   with c2:
     with st.container():
-      st.markdown(
-          "### 🤖 Machine Learning & Agricultural Modeling"
-      )
+      st.markdown("### 🤖 Machine Learning & Agricultural Modeling")
       st.markdown(
           "Predictive modeling using Random Forest algorithms, crop yield"
           " estimations, and advanced soil-crop simulation through the"
           " **QUEFTS model**."
       )
     with st.container():
-      st.markdown(
-          "### 🔌 Fiber To The Home (FTTH) Network Design"
-      )
+      st.markdown("### 🔌 Fiber To The Home (FTTH) Network Design")
       st.markdown(
           "End-to-end telecommunication network planning, GIS-based FTTx route"
           " design, splitters placement, and bill of materials (BoM) spatial"
@@ -517,22 +517,22 @@ with tab_skills:
     st.markdown("### 💻 Software & Programming")
     st.markdown(
         """
-        - **GIS & RS Software:** ArcGIS, QGIS, Global Mapper[cite: 1, 2]
-        - **Programming:** Python (GeoPandas, Pandas, NumPy, NetworkX, Scikit-Learn)[cite: 1]
-        - **Surveying & Engineering:** AutoCAD, RTK GPS, Total Station, Dumpy Level[cite: 1, 2]
-        - **Web & Telecom:** Web GIS, GeoServer, Folium, Streamlit, FTTH Design Tools[cite: 2]
+        - **GIS & RS Software:** ArcGIS, QGIS, Global Mapper
+        - **Programming:** Python (GeoPandas, Pandas, NumPy, NetworkX, Scikit-Learn)
+        - **Surveying & Engineering:** AutoCAD, RTK GPS, Total Station, Dumpy Level
+        - **Web & Telecom:** Web GIS, GeoServer, Folium, Streamlit, FTTH Design Tools
         """
     )
   with s2:
     st.markdown("### 🎯 Core Competencies")
     st.markdown(
         """
-        - Remote Sensing & Photogrammetry[cite: 1, 2]
+        - Remote Sensing & Photogrammetry
         - Machine Learning (Random Forest, QUEFTS Model)
         - FTTH Network Planning & Design
-        - Topographic, Land & Engineering Surveying[cite: 2]
-        - Spatial Data Analysis & Geostatistics[cite: 1, 2]
-        - Cartography & Map Design[cite: 2]
+        - Topographic, Land & Engineering Surveying
+        - Spatial Data Analysis & Geostatistics
+        - Cartography & Map Design
         """
     )
 
@@ -541,16 +541,15 @@ with tab_about:
   st.markdown(
       "I am a detail-oriented GIS and Remote Sensing analyst holding a Bachelor"
       " of Science degree in GIS from Jomo Kenyatta University of Agriculture"
-      " and Technology (JKUAT)[cite: 1, 2]. Based in Kenya, I combine"
-      " technical proficiency in machine learning, remote sensing, and Python"
-      " scripting with hands-on field experience in land surveying, photogrammetry,"
-      " and telecommunication FTTH network design."
+      " and Technology (JKUAT). Based in Kenya, I combine technical"
+      " proficiency in machine learning, remote sensing, and Python scripting"
+      " with hands-on field experience in land surveying, photogrammetry, and"
+      " telecommunication FTTH network design."
   )
   st.markdown(
       "Committed to deploying spatial intelligence to solve real-world"
-      " challenges in agriculture, climate action, and infrastructure [cite:"
-      " 1], I have built robust decision-support models using the QUEFTS"
-      " framework, designed multi-platform web applications, and actively"
-      " contribute open spatial data through YouthMappers and OpenStreetMap [cite:"
-      " 2]."
+      " challenges in agriculture, climate action, and infrastructure, I have"
+      " built robust decision-support models using the QUEFTS framework,"
+      " designed multi-platform web applications, and actively contribute open"
+      " spatial data through YouthMappers and OpenStreetMap."
   )
