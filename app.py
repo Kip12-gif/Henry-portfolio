@@ -36,10 +36,15 @@ h1, h2, h3, h4, h5, h6 {
     font-style: normal !important;
 }
 
+/* Main Title with Vibrant Mint/Emerald Gradient */
 h1 {
     font-weight: 800 !important;
     letter-spacing: -1.5px;
-    color: #0F172A !important;
+    background: linear-gradient(90deg, #059669 0%, #10B981 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    margin-bottom: 0.5rem;
 }
 
 /* Subheaders with Vibrant Mint/Emerald Gradient */
@@ -97,25 +102,30 @@ div.stButton > button:hover, a[data-testid="stLinkButton"]:hover {
     font-weight: 600;
 }
 
-/* Custom Styled Tabs */
+/* Clean Custom Styled Tabs (Fixed Dark Background Bug) */
 .stTabs [data-baseweb="tab-list"] {
     gap: 8px;
-    background-color: transparent;
+    background-color: #F8FAFC;
+    padding: 4px;
+    border-radius: 8px;
 }
 .stTabs [data-baseweb="tab"] {
-    background-color: #F1F5F9 !important;
-    border-radius: 6px 6px 0px 0px;
-    border: 1px solid #CBD5E1;
-    color: #475569 !important;
+    background-color: #E2E8F0 !important;
+    border-radius: 6px !important;
+    border: 1px solid #CBD5E1 !important;
+    color: #334155 !important;
     padding: 10px 20px;
     font-weight: 600;
     font-family: 'Outfit', sans-serif !important;
 }
 .stTabs [aria-selected="true"] {
-    background-color: #0F172A !important;
+    background-color: #059669 !important;
     color: #FFFFFF !important;
     font-weight: 700 !important;
-    border: 1px solid #0F172A !important;
+    border: 1px solid #047857 !important;
+}
+.stTabs [aria-selected="true"] p {
+    color: #FFFFFF !important;
 }
 
 /* Tech Stack Badge Styling */
