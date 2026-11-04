@@ -1,65 +1,73 @@
-﻿import streamlit as st
+import streamlit as st
 
 st.set_page_config(
-    page_title="Henry Kiplagat | GIS & Remote Sensing Analyst",
+    page_title="Henry Kiplagat | GIS, Remote Sensing & Spatial Engineer",
     page_icon="🌍",
     layout="wide",
 )
 
 # ==============================================================================
-# 🎨 PROFESSIONAL SLATE & BOTANICAL DESIGN SYSTEM (CSS)
+# 🎨 REFINED PROFESSIONAL SLATE & BOTANICAL DESIGN SYSTEM (CSS)
 # ==============================================================================
 custom_css = """
+<import href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
 <style>
-/* Clean Professional Light Background with Subtle Grid */
+/* Clean Professional Light Background with Modern Dot Grid */
 .stApp {
     background-color: #F8FAFC;
-    background-image: radial-gradient(#E2E8F0 0.75px, transparent 0.75px), 
-                      radial-gradient(#E2E8F0 0.75px, #F8FAFC 0.75px);
-    background-size: 32px 32px;
-    background-position: 0 0, 16px 16px;
+    background-image: radial-gradient(#CBD5E1 0.8px, transparent 0.8px), 
+                      radial-gradient(#CBD5E1 0.8px, #F8FAFC 0.8px);
+    background-size: 36px 36px;
+    background-position: 0 0, 18px 18px;
     color: #0F172A !important;
 }
 
-/* High-Contrast Typography */
+/* Premium Typography Configuration */
 html, body, [class*="css"], .stMarkdown, p, span, label, h1, h2, h3, h4, h5, h6 {
     color: #0F172A !important;
-    font-family: 'Inter', -apple-system, sans-serif;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
 }
 
-/* Header Styling */
+/* Header Styling with Smooth Gradient Text */
 h1 {
-    font-weight: 800;
+    font-weight: 800 !important;
     letter-spacing: -1.5px;
     color: #0F172A !important;
 }
 h2, h3 {
     color: #1E293B !important;
-    font-weight: 700;
+    font-weight: 700 !important;
 }
 
-/* Professional White Glass Cards */
+/* Modern Glass Cards with Elevation Hover */
 div[data-testid="stBlock"] {
     background-color: #FFFFFF !important;
-    border-radius: 12px;
-    border: 1px solid #E2E8F0;
-    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
-    padding: 1.6rem;
+    border-radius: 14px !important;
+    border: 1px solid #E2E8F0 !important;
+    box-shadow: 0 4px 24px rgba(15, 23, 42, 0.04);
+    padding: 1.8rem;
+    transition: all 0.3s ease;
+}
+div[data-testid="stBlock"]:hover {
+    border-color: #CBD5E1 !important;
+    box-shadow: 0 8px 30px rgba(15, 23, 42, 0.08);
 }
 
-/* Primary Action Buttons */
+/* Sleek Primary Buttons */
 div.stButton > button, div.stDownloadButton > button {
     background-color: #0F172A !important;
     color: #FFFFFF !important;
     border-radius: 8px !important;
     border: none !important;
     font-weight: 600 !important;
+    padding: 0.5rem 1rem;
     box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
     transition: all 0.2s ease;
 }
 div.stButton > button:hover {
     background-color: #334155 !important;
-    transform: translateY(-1px);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(15, 23, 42, 0.2);
 }
 
 /* Metric Display Cards */
@@ -75,7 +83,7 @@ div.stButton > button:hover {
 
 /* Custom Styled Tabs */
 .stTabs [data-baseweb="tab-list"] {
-    gap: 8px;
+    gap: 10px;
     background-color: transparent;
 }
 .stTabs [data-baseweb="tab"] {
@@ -83,25 +91,26 @@ div.stButton > button:hover {
     border-radius: 8px 8px 0px 0px;
     border: 1px solid #CBD5E1;
     color: #475569 !important;
-    padding: 10px 20px;
+    padding: 12px 22px;
     font-weight: 600;
 }
 .stTabs [aria-selected="true"] {
     background-color: #0F172A !important;
     color: #FFFFFF !important;
     font-weight: 700 !important;
-    border: 1px solid #0F172A;
+    border: 1px solid #0F172A !important;
 }
 
-/* Badge Styling */
+/* Tech Stack Badge Styling */
 .badge {
     display: inline-block;
-    padding: 4px 10px;
-    margin: 2px;
-    font-size: 12px;
+    padding: 5px 12px;
+    margin: 3px;
+    font-size: 11px;
     font-weight: 600;
-    color: #0F172A;
-    background-color: #E2E8F0;
+    color: #334155;
+    background-color: #F1F5F9;
+    border: 1px solid #E2E8F0;
     border-radius: 6px;
 }
 </style>
@@ -141,16 +150,16 @@ with st.sidebar:
 # ==============================================================================
 st.title("Hi, I'm Henry Kiplagat 🚀")
 st.markdown(
-    "### *GIS & Remote Sensing Analyst specializing in spatial analysis,"
-    " infrastructure routing, satellite data interpretation, and agricultural"
-    " decision-support systems.*"
+    "### *GIS & Remote Sensing Analyst specializing in spatial modeling, machine"
+    " learning applications, telecommunication network design, and"
+    " infrastructure routing.*"
 )
 
 # Key Metrics Row
 m1, m2, m3, m4 = st.columns(4)
-m1.metric("Featured Projects", "6 Core Works")
-m2.metric("Mapping Engines", "ArcGIS / QGIS / Folium")
-m3.metric("Key Domain", "Agri-Tech & Infrastructure")
+m1.metric("Live Web Apps", "10+ Built")
+m2.metric("Domain Expertise", "RS, Survey & FTTH")
+m3.metric("Modeling", "QUEFTS & Random Forest")
 m4.metric("Open Source", "YouthMappers / OSM")
 
 st.divider()
@@ -159,7 +168,7 @@ st.divider()
 # 📑 PORTFOLIO TABS
 # ==============================================================================
 tab_projects, tab_experience, tab_services, tab_skills, tab_about = st.tabs([
-    "💼 Projects & Portfolio",
+    "💼 Projects Hub (10 Apps)",
     "🏢 Work Experience",
     "🛠️ Consulting Services",
     "⚡ Technical Stack",
@@ -167,154 +176,249 @@ tab_projects, tab_experience, tab_services, tab_skills, tab_about = st.tabs([
 ])
 
 with tab_projects:
-  st.markdown("## 🌟 Comprehensive Geospatial Project Portfolio")
+  st.markdown("## 🌟 Comprehensive Geospatial Project Hub")
   st.markdown(
-      "Explore production-ready mapping tools, spatial models, and interactive"
-      " web applications bridging infrastructure, climate data, and agriculture."
+      "Explore over 10 production-ready mapping tools, machine learning models,"
+      " and interactive web applications spanning agriculture, infrastructure,"
+      " and telecommunications."
   )
+  st.divider()
 
-  # Project 1: LAPSSET Pipeline Router
+  # Project 1
   with st.container():
-    col1, col2 = st.columns([2, 1])
-    with col1:
+    c1, c2 = st.columns([3, 1])
+    with c1:
       st.markdown(
-          "### 🛢️ LAPSSET Corridor — Least-Cost Pipeline Pathfinding"
+          "### 🛢️ 1. LAPSSET Corridor — Least-Cost Pipeline Pathfinding"
       )
       st.markdown(
-          "An advanced spatial network routing notebook that calculates the"
-          " safest and most efficient pipeline corridor between the Lokichar"
-          " Oil Fields (Turkana) and Mokowe Refinery (Lamu, Kenya). Integrates"
-          " graph theory (`NetworkX`), terrain elevation matrices, and"
-          " automated elevation profiling to navigate around escarpments and"
-          " protected zones."
+          "Advanced spatial network routing notebook computing optimal pipeline"
+          " paths between Turkana (Lokichar) and Lamu (Mokowe) while avoiding"
+          " steep escarpments and protected zones using NetworkX graph theory"
+          " and DEM elevation matrices."
       )
       st.markdown(
-          '<span class="badge">NetworkX Graph Theory</span><span'
+          '<span class="badge">NetworkX</span><span'
           ' class="badge">DEM Routing</span><span'
           ' class="badge">Matplotlib</span>',
           unsafe_allow_html=True,
       )
-    with col2:
+    with c2:
       st.markdown("<br>", unsafe_allow_html=True)
-      if st.button("View Routing Details", key="proj_lapsset"):
-        st.info("Advanced least-cost path analysis and elevation profiling.")
+      st.link_button(
+          "🔗 Launch App / Repo",
+          "https://github.com/yourusername/lapsset-pipeline-router",
+      )
     st.divider()
 
-  # Project 2: NomadSpots Workspace Atlas
+  # Project 2
   with st.container():
-    col1, col2 = st.columns([2, 1])
-    with col1:
-      st.markdown("### ☕ NomadSpots — Global Workspace Atlas")
+    c1, c2 = st.columns([3, 1])
+    with c1:
+      st.markdown("### ☕ 2. NomadSpots — Global Workspace & Coffee Atlas")
       st.markdown(
-          "A keyless, interactive workspace directory and global map tailored"
-          " for remote workers. Features dual-layer maps (OpenStreetMap & Google"
-          " Satellite), instant keyword filtering, community check-ins with"
-          " session state persistence, an AI workspace recommendation engine,"
-          " and exportable Markdown travel guides."
+          "Keyless remote work directory with dual-layer maps (OSM & Google"
+          " Satellite), instant search, persistent user check-ins, AI"
+          " workspace recommendations, and Markdown travel guide export."
       )
       st.markdown(
           '<span class="badge">Streamlit</span><span'
-          ' class="badge">Folium</span><span'
-          ' class="badge">Pandas</span><span class="badge">Zero-API</span>',
+          ' class="badge">Folium</span><span class="badge">Pandas</span>',
           unsafe_allow_html=True,
       )
-    with col2:
+    with c2:
       st.markdown("<br>", unsafe_allow_html=True)
-      if st.button("View NomadSpots", key="proj_nomad"):
-        st.info("Interactive geo-web directory application.")
+      st.link_button(
+          "🔗 Launch App / Repo", "https://github.com/yourusername/nomad-spots"
+      )
     st.divider()
 
-  # Project 3: UrbanGreen Canopy Tracker
+  # Project 3
   with st.container():
-    col1, col2 = st.columns([2, 1])
-    with col1:
-      st.markdown("### 🌿 UrbanGreen — Canopy & Carbon Tracker")
+    c1, c2 = st.columns([3, 1])
+    with c1:
+      st.markdown("### 🌿 3. UrbanGreen — Canopy & Carbon Tracker")
       st.markdown(
-          "A neighborhood environmental geospatial registry that maps urban"
-          " tree canopies, tracks specimen health conditions, and calculates"
-          " estimated annual CO₂ offsets. Includes map click-to-pin coordinate"
-          " capture and interactive Plotly forestry analytics."
+          "Neighborhood environmental registry mapping urban tree canopies,"
+          " specimen health, and annual CO₂ offsets with map click-to-pin"
+          " coordinate capture and Plotly forestry analytics."
       )
       st.markdown(
-          '<span class="badge">Geospatial GIS</span><span'
-          ' class="badge">Plotly Analytics</span><span'
-          ' class="badge">Environmental Science</span>',
+          '<span class="badge">GIS Mapping</span><span'
+          ' class="badge">Plotly</span><span class="badge">Carbon Tracking</span>',
           unsafe_allow_html=True,
       )
-    with col2:
+    with c2:
       st.markdown("<br>", unsafe_allow_html=True)
-      if st.button("View UrbanGreen", key="proj_urban"):
-        st.info("Environmental carbon offset and tree registry app.")
+      st.link_button(
+          "🔗 Launch App / Repo", "https://github.com/yourusername/urban-green"
+      )
     st.divider()
 
-  # Project 4: Fertilizer Subsidy Model
+  # Project 4
   with st.container():
-    col1, col2 = st.columns([2, 1])
-    with col1:
-      st.markdown("### 🌱 Fertilizer Subsidy Allocation GIS Model")
+    c1, c2 = st.columns([3, 1])
+    with c1:
+      st.markdown("### 🌱 4. Fertilizer Subsidy Allocation GIS Model")
       st.markdown(
-          "A spatial decision-support model integrating yield, soil, and"
-          " rainfall data to estimate precise fertilizer requirements using"
-          " the **QUEFTS model** and machine learning. Built as a final-year"
-          " research project to optimize fertilizer distribution and target"
-          " smallholder farmers effectively."
+          "Final-year research project utilizing machine learning and the"
+          " **QUEFTS model** integrated with soil, yield, and rainfall data"
+          " to optimize smallholder farmer fertilizer distribution."
       )
       st.markdown(
           '<span class="badge">QUEFTS Model</span><span'
           ' class="badge">Machine Learning</span><span'
-          ' class="badge">Python</span><span class="badge">Spatial'
-          ' Modeling</span>',
-          unsafe_allow_html=True,
-      )
-    with col2:
-      st.markdown("<br>", unsafe_allow_html=True)
-      if st.button("View Research Details", key="proj_sub"):
-        st.info("Final-year research application focused on agricultural optimization.")
-    st.divider()
-
-  # Project 5: Maize Yield Estimation
-  with st.container():
-    col1, col2 = st.columns([2, 1])
-    with col1:
-      st.markdown("### 🌽 Maize Yield Estimation Using WaPOR Data")
-      st.markdown(
-          "Processed satellite Net Primary Production (NPP) data from FAO WaPOR"
-          " to evaluate biomass accumulation and generate high-resolution"
-          " maize yield maps for Elgeyo-Marakwet County, supporting regional"
-          " food security monitoring."
-      )
-      st.markdown(
-          '<span class="badge">Remote Sensing</span><span'
-          ' class="badge">WaPOR Satellite Data</span><span'
-          ' class="badge">Agricultural GIS</span>',
-          unsafe_allow_html=True,
-      )
-    with col2:
-      st.markdown("<br>", unsafe_allow_html=True)
-      if st.button("View Maize Details", key="proj_maize"):
-        st.info("Remote sensing workflow evaluating regional biomass and yield.")
-    st.divider()
-
-  # Project 6: Rainfall Trend Analysis
-  with st.container():
-    col1, col2 = st.columns([2, 1])
-    with col1:
-      st.markdown("### 🌦️ Rainfall Trend Analysis in Kenya")
-      st.markdown(
-          "Analyzed NASA POWER multi-year climate data using Python scripts to"
-          " visualize spatial rainfall variability, climate trends, and drought"
-          " exposure patterns across agricultural zones in Kenya."
-      )
-      st.markdown(
-          '<span class="badge">Climate Analysis</span><span'
-          ' class="badge">NASA POWER API</span><span'
           ' class="badge">Python</span>',
           unsafe_allow_html=True,
       )
-    with col2:
+    with c2:
       st.markdown("<br>", unsafe_allow_html=True)
-      if st.button("View Climate Details", key="proj_rain"):
-        st.info("Climatological trend analysis using automated Python scripting.")
+      st.link_button(
+          "🔗 Launch App / Repo",
+          "https://github.com/yourusername/fertilizer-subsidy-model",
+      )
+    st.divider()
+
+  # Project 5
+  with st.container():
+    c1, c2 = st.columns([3, 1])
+    with c1:
+      st.markdown("### 🌽 5. Maize Yield Estimation Using WaPOR Data")
+      st.markdown(
+          "Remote sensing workflow processing FAO WaPOR Net Primary Production"
+          " (NPP) satellite data to calculate biomass and map maize yields across"
+          " Elgeyo-Marakwet County."
+      )
+      st.markdown(
+          '<span class="badge">Remote Sensing</span><span'
+          ' class="badge">WaPOR Data</span><span'
+          ' class="badge">Agriculture</span>',
+          unsafe_allow_html=True,
+      )
+    with c2:
+      st.markdown("<br>", unsafe_allow_html=True)
+      st.link_button(
+          "🔗 Launch App / Repo",
+          "https://github.com/yourusername/maize-yield-estimation",
+      )
+    st.divider()
+
+  # Project 6
+  with st.container():
+    c1, c2 = st.columns([3, 1])
+    with c1:
+      st.markdown("### 🌦️ 6. Rainfall Trend Analysis Dashboard")
+      st.markdown(
+          "Python-automated climate analytics tool pulling multi-year NASA"
+          " POWER data to visualize drought exposure and rainfall variability"
+          " across agricultural regions."
+      )
+      st.markdown(
+          '<span class="badge">NASA POWER API</span><span'
+          ' class="badge">Climate Analysis</span><span'
+          ' class="badge">Pandas</span>',
+          unsafe_allow_html=True,
+      )
+    with c2:
+      st.markdown("<br>", unsafe_allow_html=True)
+      st.link_button(
+          "🔗 Launch App / Repo",
+          "https://github.com/yourusername/rainfall-trend-analysis",
+      )
+    st.divider()
+
+  # Project 7
+  with st.container():
+    c1, c2 = st.columns([3, 1])
+    with c1:
+      st.markdown("### 🌐 7. SpotCheck Kenya Mobile Field App")
+      st.markdown(
+          "Custom mobile application project environment initialized with"
+          " Flutter for crowd-sourced spot check-ins, local venue ratings, and"
+          " integrated spatial mapping."
+      )
+      st.markdown(
+          '<span class="badge">Flutter</span><span'
+          ' class="badge">Mobile App</span><span'
+          ' class="badge">Dart</span>',
+          unsafe_allow_html=True,
+      )
+    with c2:
+      st.markdown("<br>", unsafe_allow_html=True)
+      st.link_button(
+          "🔗 Launch App / Repo",
+          "https://github.com/yourusername/spotcheck-kenya",
+      )
+    st.divider()
+
+  # Project 8
+  with st.container():
+    c1, c2 = st.columns([3, 1])
+    with c1:
+      st.markdown("### ☕ 8. AgriCommerce Direct Coffee Trade App")
+      st.markdown(
+          "Agricultural e-commerce Streamlit platform linked with GitHub"
+          " designed to bridge international buyers with local cooperative"
+          " coffee producers for direct trade matching."
+      )
+      st.markdown(
+          '<span class="badge">Streamlit</span><span'
+          ' class="badge">Agri-Tech</span><span'
+          ' class="badge">E-Commerce</span>',
+          unsafe_allow_html=True,
+      )
+    with c2:
+      st.markdown("<br>", unsafe_allow_html=True)
+      st.link_button(
+          "🔗 Launch App / Repo",
+          "https://github.com/yourusername/agri-commerce-coffee",
+      )
+    st.divider()
+
+  # Project 9
+  with st.container():
+    c1, c2 = st.columns([3, 1])
+    with c1:
+      st.markdown("### 🌍 9. Global Bucket List & Nomad Web App")
+      st.markdown(
+          "Interactive personal travel bucket list web application styled with"
+          " a vintage notebook paper UI texture and open-source map overlays."
+      )
+      st.markdown(
+          '<span class="badge">Web Design</span><span'
+          ' class="badge">Folium</span><span class="badge">UI Styling</span>',
+          unsafe_allow_html=True,
+      )
+    with c2:
+      st.markdown("<br>", unsafe_allow_html=True)
+      st.link_button(
+          "🔗 Launch App / Repo",
+          "https://github.com/yourusername/global-bucket-list",
+      )
+    st.divider()
+
+  # Project 10
+  with st.container():
+    c1, c2 = st.columns([3, 1])
+    with c1:
+      st.markdown("### 🗺️ 10. Soil Organic Carbon & pH Mapper")
+      st.markdown(
+          "Raster mapping and classification of Soil Organic Carbon and soil pH"
+          " datasets for Elgeyo-Marakwet County utilizing ISRIC SoilGrids"
+          " spatial data."
+      )
+      st.markdown(
+          '<span class="badge">SoilGrids</span><span'
+          ' class="badge">Raster Analysis</span><span'
+          ' class="badge">QGIS / Python</span>',
+          unsafe_allow_html=True,
+      )
+    with c2:
+      st.markdown("<br>", unsafe_allow_html=True)
+      st.link_button(
+          "🔗 Launch App / Repo",
+          "https://github.com/yourusername/soil-carbon-mapper",
+      )
     st.divider()
 
 with tab_experience:
@@ -360,31 +464,49 @@ with tab_experience:
 with tab_services:
   st.markdown("## 🛠️ Professional Consulting Services")
   st.markdown(
-      "Delivering end-to-end geospatial solutions for infrastructure,"
-      " agriculture, land management, and spatial web applications."
+      "Specialized consultancy services built on rigorous field experience,"
+      " advanced remote sensing, machine learning modeling, and network"
+      " engineering."
   )
 
-  c1, c2, c3 = st.columns(3)
+  c1, c2 = st.columns(2)
   with c1:
     with st.container():
-      st.markdown("### 🛢️ Infrastructure & Routing")
       st.markdown(
-          "Least-cost path analysis, corridor planning, terrain modeling, and"
-          " spatial network routing for major infrastructure projects."
+          "### 🛰️ Remote Sensing, Photogrammetry & GIS Analysis"
+      )
+      st.markdown(
+          "High-precision satellite image classification, UAV/drone imagery"
+          " photogrammetry, change detection, spatial modeling, and automated GIS"
+          " workflow scripting."
+      )
+    with st.container():
+      st.markdown(
+          "### 📐 Land, Topographic & Engineering Surveying"
+      )
+      st.markdown(
+          "Cadastral boundary surveys, topographic mapping, construction"
+          " layout, and precise site data collection using RTK GPS, Total"
+          " Stations, and Dumpy Levels."
       )
   with c2:
     with st.container():
-      st.markdown("### 🌾 Agricultural & Environmental GIS")
       st.markdown(
-          "Crop yield estimation, soil health mapping, precision fertilizer"
-          " subsidy allocation models, and carbon offset tracking."
+          "### 🤖 Machine Learning & Agricultural Modeling"
       )
-  with c3:
-    with st.container():
-      st.markdown("### 🌐 Geo-Web Development")
       st.markdown(
-          "Interactive web maps, mobile-compliant dashboards, and keyless"
-          " spatial applications built with Streamlit, Folium, and Python."
+          "Predictive modeling using Random Forest algorithms, crop yield"
+          " estimations, and advanced soil-crop simulation through the"
+          " **QUEFTS model**."
+      )
+    with st.container():
+      st.markdown(
+          "### 🔌 Fiber To The Home (FTTH) Network Design"
+      )
+      st.markdown(
+          "End-to-end telecommunication network planning, GIS-based FTTx route"
+          " design, splitters placement, and bill of materials (BoM) spatial"
+          " mapping."
       )
 
 with tab_skills:
@@ -395,22 +517,22 @@ with tab_skills:
     st.markdown("### 💻 Software & Programming")
     st.markdown(
         """
-        - **GIS Software:** ArcGIS, QGIS, Global Mapper[cite: 1, 2]
-        - **Programming & Scripting:** Python (GeoPandas, Pandas, NumPy, NetworkX)[cite: 1]
-        - **Surveying Tools:** RTK GPS, Total Station, Dumpy Level, AutoCAD[cite: 1, 2]
-        - **Web & Cloud GIS:** Web GIS, GeoServer, Folium, Streamlit[cite: 2]
+        - **GIS & RS Software:** ArcGIS, QGIS, Global Mapper[cite: 1, 2]
+        - **Programming:** Python (GeoPandas, Pandas, NumPy, NetworkX, Scikit-Learn)[cite: 1]
+        - **Surveying & Engineering:** AutoCAD, RTK GPS, Total Station, Dumpy Level[cite: 1, 2]
+        - **Web & Telecom:** Web GIS, GeoServer, Folium, Streamlit, FTTH Design Tools[cite: 2]
         """
     )
   with s2:
     st.markdown("### 🎯 Core Competencies")
     st.markdown(
         """
+        - Remote Sensing & Photogrammetry[cite: 1, 2]
+        - Machine Learning (Random Forest, QUEFTS Model)
+        - FTTH Network Planning & Design
+        - Topographic, Land & Engineering Surveying[cite: 2]
+        - Spatial Data Analysis & Geostatistics[cite: 1, 2]
         - Cartography & Map Design[cite: 2]
-        - Remote Sensing & Satellite Image Interpretation[cite: 1, 2]
-        - Spatial Data Analysis & Geostatistical Modeling[cite: 1, 2]
-        - GPS & Field Data Collection[cite: 2]
-        - UAV / LiDAR Data Processing[cite: 2]
-        - Cadastral & Engineering Surveying[cite: 2]
         """
     )
 
@@ -420,15 +542,15 @@ with tab_about:
       "I am a detail-oriented GIS and Remote Sensing analyst holding a Bachelor"
       " of Science degree in GIS from Jomo Kenyatta University of Agriculture"
       " and Technology (JKUAT)[cite: 1, 2]. Based in Kenya, I combine"
-      " technical expertise in spatial analysis, remote sensing, and Python"
-      " scripting with hands-on experience in cadastral surveying, land"
-      " administration[cite: 1, 2], and geo-web application development."
+      " technical proficiency in machine learning, remote sensing, and Python"
+      " scripting with hands-on field experience in land surveying, photogrammetry,"
+      " and telecommunication FTTH network design."
   )
   st.markdown(
-      "Passionate about applying geospatial technology to solve real-world"
+      "Committed to deploying spatial intelligence to solve real-world"
       " challenges in agriculture, climate action, and infrastructure [cite:"
-      " 1], I have engineered data-driven models like fertilizer subsidy allocation"
-      " algorithms using the QUEFTS framework, least-cost routing for"
-      " corridors, and interactive web maps, while actively contributing open"
-      " spatial data through YouthMappers and OpenStreetMap[cite: 2]."
+      " 1], I have built robust decision-support models using the QUEFTS"
+      " framework, designed multi-platform web applications, and actively"
+      " contribute open spatial data through YouthMappers and OpenStreetMap [cite:"
+      " 2]."
   )
