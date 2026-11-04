@@ -7,11 +7,11 @@ st.set_page_config(
 )
 
 # ==============================================================================
-# 🎨 SCIENTIFIC & PROFESSIONAL DESIGN SYSTEM (CSS)
+# 🎨 SCIENTIFIC & PROFESSIONAL CREATIVE DESIGN SYSTEM (CSS)
 # ==============================================================================
 custom_css = """
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 
 /* Clean Scientific Light Background with Subtle Grid */
 .stApp {
@@ -23,14 +23,19 @@ custom_css = """
     color: #0F172A !important;
 }
 
-/* Typography Configuration (Normal Weight & High Contrast) */
-html, body, [class*="css"], .stMarkdown, p, span, label, h1, h2, h3, h4, h5, h6 {
+/* Typography Configuration */
+html, body, [class*="css"], .stMarkdown, p, span, label, div {
     color: #0F172A !important;
     font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
     font-style: normal !important;
 }
 
-/* Header Styling */
+/* Creative Scientific Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', sans-serif !important;
+    font-style: normal !important;
+}
+
 h1 {
     font-weight: 800 !important;
     letter-spacing: -1.5px;
@@ -61,19 +66,22 @@ div[data-testid="stBlock"]:hover {
     box-shadow: 0 6px 20px rgba(16, 185, 129, 0.08);
 }
 
-/* Sleek Primary Buttons */
-div.stButton > button, div.stDownloadButton > button {
+/* Highly Visible Primary Buttons & Link Buttons */
+div.stButton > button, div.stDownloadButton > button, a[data-testid="stLinkButton"] {
     background-color: #0F172A !important;
     color: #FFFFFF !important;
     border-radius: 6px !important;
-    border: none !important;
+    border: 1px solid #1E293B !important;
     font-weight: 600 !important;
-    padding: 0.4rem 1rem;
-    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.1);
+    padding: 0.5rem 1.2rem;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
     transition: all 0.2s ease;
+    text-decoration: none !important;
 }
-div.stButton > button:hover {
+div.stButton > button:hover, a[data-testid="stLinkButton"]:hover {
     background-color: #059669 !important;
+    border-color: #059669 !important;
+    color: #FFFFFF !important;
     transform: translateY(-1px);
 }
 
@@ -82,6 +90,7 @@ div.stButton > button:hover {
     color: #059669 !important;
     font-weight: 800 !important;
     font-size: 2rem !important;
+    font-family: 'Outfit', sans-serif !important;
 }
 [data-testid="stMetricLabel"] {
     color: #64748B !important;
@@ -100,6 +109,7 @@ div.stButton > button:hover {
     color: #475569 !important;
     padding: 10px 20px;
     font-weight: 600;
+    font-family: 'Outfit', sans-serif !important;
 }
 .stTabs [aria-selected="true"] {
     background-color: #0F172A !important;
@@ -128,7 +138,7 @@ st.markdown(custom_css, unsafe_allow_html=True)
 # 🧭 SIDEBAR / PROFILE & NAVIGATION
 # ==============================================================================
 with st.sidebar:
-  # Profile Image (Place 'profile.jpg' in your repository folder)
+  # Profile Image Container
   try:
     st.image("profile.jpg", use_container_width=True)
   except:
