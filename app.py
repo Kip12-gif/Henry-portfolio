@@ -7,7 +7,7 @@ st.set_page_config(
 )
 
 # ==============================================================================
-# 🎨 CLEAN SCIENTIFIC PROFESSIONAL DESIGN SYSTEM (CSS)
+# 🎨 SCIENTIFIC & PROFESSIONAL CREATIVE DESIGN SYSTEM (CSS)
 # ==============================================================================
 custom_css = """
 <style>
@@ -36,15 +36,15 @@ h1, h2, h3, h4, h5, h6 {
     font-style: normal !important;
 }
 
-/* Main Title Style (Solid, Highly Visible Professional Emerald) */
+/* Main Title Style with Mint/Emerald Gradient */
 h1 {
     font-weight: 800 !important;
     letter-spacing: -1.5px;
-    color: #047857 !important;
+    color: #059669 !important;
     margin-bottom: 0.5rem;
 }
 
-/* Subheaders Style (Solid Professional Dark Slate / Emerald) */
+/* Subheaders with Vibrant Mint/Emerald Gradient */
 h2, h3 {
     font-weight: 700 !important;
     color: #059669 !important;
@@ -142,7 +142,6 @@ st.markdown(custom_css, unsafe_allow_html=True)
 # 🧭 SIDEBAR / PROFILE & NAVIGATION
 # ==============================================================================
 with st.sidebar:
-  # Profile Image Container
   try:
     st.image("profile.jpg", use_container_width=True)
   except:
