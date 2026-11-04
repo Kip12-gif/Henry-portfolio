@@ -23,10 +23,11 @@ custom_css = """
     color: #0F172A !important;
 }
 
-/* Typography Configuration */
+/* Typography Configuration (Normal Weight & High Contrast) */
 html, body, [class*="css"], .stMarkdown, p, span, label, h1, h2, h3, h4, h5, h6 {
     color: #0F172A !important;
     font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    font-style: normal !important;
 }
 
 /* Header Styling */
@@ -35,9 +36,15 @@ h1 {
     letter-spacing: -1.5px;
     color: #0F172A !important;
 }
+
+/* Subheaders with Vibrant Mint/Emerald Gradient */
 h2, h3 {
-    color: #1E293B !important;
     font-weight: 700 !important;
+    background: linear-gradient(90deg, #059669 0%, #10B981 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    margin-bottom: 0.5rem;
 }
 
 /* Scientific Glass Cards with Elevation Hover */
@@ -50,8 +57,8 @@ div[data-testid="stBlock"] {
     transition: all 0.25s ease;
 }
 div[data-testid="stBlock"]:hover {
-    border-color: #94A3B8 !important;
-    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.06);
+    border-color: #10B981 !important;
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.08);
 }
 
 /* Sleek Primary Buttons */
@@ -66,13 +73,13 @@ div.stButton > button, div.stDownloadButton > button {
     transition: all 0.2s ease;
 }
 div.stButton > button:hover {
-    background-color: #334155 !important;
+    background-color: #059669 !important;
     transform: translateY(-1px);
 }
 
 /* Metric Display Cards */
 [data-testid="stMetricValue"] {
-    color: #0F172A !important;
+    color: #059669 !important;
     font-weight: 800 !important;
     font-size: 2rem !important;
 }
@@ -108,9 +115,9 @@ div.stButton > button:hover {
     margin: 2px;
     font-size: 11px;
     font-weight: 600;
-    color: #334155;
-    background-color: #F1F5F9;
-    border: 1px solid #E2E8F0;
+    color: #059669;
+    background-color: #ECFDF5;
+    border: 1px solid #A7F3D0;
     border-radius: 4px;
 }
 </style>
@@ -158,9 +165,9 @@ with st.sidebar:
 # ==============================================================================
 st.title("Henry Kiplagat, B.Sc. GIS 🚀")
 st.markdown(
-    "### *GIS & Remote Sensing Analyst specializing in spatial modeling, machine"
+    "GIS and Remote Sensing Analyst specializing in spatial modeling, machine"
     " learning applications, telecommunication network design, and"
-    " infrastructure routing.*"
+    " infrastructure routing."
 )
 
 # Key Metrics Row
@@ -434,7 +441,7 @@ with tab_experience:
 
   with st.container():
     st.markdown("### 🔹 Junior GIS Analyst | Anglepoint Company Ltd")
-    st.caption("*June 2025 – February 2026*")
+    st.caption("June 2025 – February 2026")
     st.markdown(
         """
         - Conducted spatial data clustering and advanced analysis using Python.
@@ -447,10 +454,10 @@ with tab_experience:
 
   with st.container():
     st.markdown("### 🔹 Surveyor Intern | Ministry of Lands and Physical Planning")
-    st.caption("*May 2024 – August 2024*")
+    st.caption("May 2024 – August 2024")
     st.markdown(
         """
-        - Conducted land boundary identification and rigorous field surveys using RTK GPS, total station, and dumpy level equipment.
+        - Conducted land boundary identification and field surveys using RTK GPS, total station, and dumpy level equipment.
         - Assisted professional surveyors in preparing master plans and detailed site plans using AutoCAD.
         - Processed land mutation forms and supported cadastral data verification for accurate land parcel documentation.
         """
@@ -461,7 +468,7 @@ with tab_experience:
     st.markdown(
         "### 🔹 YouthMappers Contributor & Volunteer | OpenStreetMap Kenya"
     )
-    st.caption("*September 2023 – Present | Nairobi, Kenya*")
+    st.caption("September 2023 – Present | Nairobi, Kenya")
     st.markdown(
         """
         - Active contributor leveraging open-source geospatial platforms (OpenStreetMap, HOT Tasking Manager, JOSM) to map critical infrastructure.
@@ -472,8 +479,8 @@ with tab_experience:
 with tab_services:
   st.markdown("## 🛠️ Professional Consulting Services")
   st.markdown(
-      "Specialized consultancy services built on rigorous field experience,"
-      " advanced remote sensing, machine learning modeling, and network"
+      "Specialized consultancy services built on field experience, advanced"
+      " remote sensing, machine learning modeling, and telecommunication network"
       " engineering."
   )
 
@@ -490,16 +497,15 @@ with tab_services:
       st.markdown("### 📐 Land, Topographic & Engineering Surveying")
       st.markdown(
           "Cadastral boundary surveys, topographic mapping, construction"
-          " layout, and precise site data collection using RTK GPS, Total"
-          " Stations, and Dumpy Levels."
+          " layout, and site data collection using RTK GPS, Total Stations,"
+          " and Dumpy Levels."
       )
   with c2:
     with st.container():
       st.markdown("### 🤖 Machine Learning & Agricultural Modeling")
       st.markdown(
           "Predictive modeling using Random Forest algorithms, crop yield"
-          " estimations, and advanced soil-crop simulation through the"
-          " **QUEFTS model**."
+          " estimations, and soil-crop simulation through the **QUEFTS model**."
       )
     with st.container():
       st.markdown("### 🔌 Fiber To The Home (FTTH) Network Design")
@@ -543,13 +549,13 @@ with tab_about:
       " of Science degree in GIS from Jomo Kenyatta University of Agriculture"
       " and Technology (JKUAT). Based in Kenya, I combine technical"
       " proficiency in machine learning, remote sensing, and Python scripting"
-      " with hands-on field experience in land surveying, photogrammetry, and"
+      " with field experience in land surveying, photogrammetry, and"
       " telecommunication FTTH network design."
   )
   st.markdown(
       "Committed to deploying spatial intelligence to solve real-world"
       " challenges in agriculture, climate action, and infrastructure, I have"
-      " built robust decision-support models using the QUEFTS framework,"
-      " designed multi-platform web applications, and actively contribute open"
-      " spatial data through YouthMappers and OpenStreetMap."
+      " built decision-support models using the QUEFTS framework, designed"
+      " multi-platform web applications, and actively contribute open spatial"
+      " data through YouthMappers and OpenStreetMap."
   )
