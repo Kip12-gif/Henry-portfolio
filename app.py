@@ -36,18 +36,18 @@ h1, h2, h3, h4, h5, h6 {
     font-style: normal !important;
 }
 
-/* Main Title Style with Mint/Emerald Gradient */
+/* Main Title Style with Light Mint/Emerald Green */
 h1 {
     font-weight: 800 !important;
     letter-spacing: -1.5px;
-    color: #059669 !important;
+    color: #10B981 !important;
     margin-bottom: 0.5rem;
 }
 
-/* Subheaders with Vibrant Mint/Emerald Gradient */
+/* Subheaders with Light Mint/Emerald Green */
 h2, h3 {
     font-weight: 700 !important;
-    color: #059669 !important;
+    color: #10B981 !important;
     margin-bottom: 0.5rem;
 }
 
@@ -78,15 +78,15 @@ div.stButton > button, div.stDownloadButton > button, a[data-testid="stLinkButto
     text-decoration: none !important;
 }
 div.stButton > button:hover, a[data-testid="stLinkButton"]:hover {
-    background-color: #059669 !important;
-    border-color: #059669 !important;
+    background-color: #10B981 !important;
+    border-color: #10B981 !important;
     color: #FFFFFF !important;
     transform: translateY(-1px);
 }
 
 /* Metric Display Cards */
 [data-testid="stMetricValue"] {
-    color: #059669 !important;
+    color: #10B981 !important;
     font-weight: 800 !important;
     font-size: 2rem !important;
     font-family: 'Outfit', sans-serif !important;
@@ -113,10 +113,10 @@ div.stButton > button:hover, a[data-testid="stLinkButton"]:hover {
     font-family: 'Outfit', sans-serif !important;
 }
 .stTabs [aria-selected="true"] {
-    background-color: #059669 !important;
+    background-color: #10B981 !important;
     color: #FFFFFF !important;
     font-weight: 700 !important;
-    border: 1px solid #047857 !important;
+    border: 1px solid #059669 !important;
 }
 .stTabs [aria-selected="true"] p {
     color: #FFFFFF !important;
