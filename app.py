@@ -30,22 +30,22 @@ html, body, [class*="css"], .stMarkdown, p, span, label, div {
     font-style: normal !important;
 }
 
-/* Creative Scientific Headings */
-h1, h2, h3, h4, h5, h6 {
+/* Creative Scientific Headings Font Family */
+h1, h2, h3, h4, h5, h6, div.stMarkdown h1, div.stMarkdown h2, div.stMarkdown h3 {
     font-family: 'Outfit', sans-serif !important;
     font-style: normal !important;
 }
 
-/* Main Title Style with Light Mint/Emerald Green */
-h1 {
+/* Main Title Style with Vibrant Light Green */
+h1, div.stMarkdown h1 {
     font-weight: 800 !important;
     letter-spacing: -1.5px;
     color: #10B981 !important;
     margin-bottom: 0.5rem;
 }
 
-/* Subheaders with Light Mint/Emerald Green */
-h2, h3 {
+/* Subheaders with Vibrant Light Green */
+h2, h3, div.stMarkdown h2, div.stMarkdown h3 {
     font-weight: 700 !important;
     color: #10B981 !important;
     margin-bottom: 0.5rem;
